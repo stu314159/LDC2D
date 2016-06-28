@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N ldc2DRe5000
+#PBS -o ldc_2DRe5000.out
+#PBS -A USNAM37752431
+#PBS -l walltime=01:00:00
+#PBS -q gpu
+#PBS -l select=1:ncpus=10:accelerator_model=Tesla_K40s
+JID=`echo $PBS_JOBID | cut -d. -f1`
+JOBDIR=/p/work1/$LOGNAME/${JID}.SHEPARD
+mkdir $JOBDIR
+
+cp $PBS_O_WORKDIR/ldc2D $JOBDIR
+cd $JOBDIR
+
+aprun -n 1 ./ldc2D 500 1001 2000000 1.85 100000
+exit

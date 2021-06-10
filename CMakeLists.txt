@@ -12,7 +12,7 @@ add_executable(ldc2D src/ldc2D.cxx)
 
 set_property(TARGET ldc2D PROPERTY CUDA_SEPARABLE_COMPILATION ON)
 
-target_include_directories(ldc2D PUBLIC include PRIVATE src ${CUDA_INCLUDE_DIRS})
+target_include_directories(ldc2D PUBLIC include PRIVATE ${CUDA_INCLUDE_DIRS})
 target_include_directories(vtk_lib PUBLIC include)
 target_include_directories(lbm_lib PUBLIC include)
 

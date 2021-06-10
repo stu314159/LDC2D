@@ -4,3 +4,4 @@
 *.vtk
 ldc2D
 *.csv
+build/

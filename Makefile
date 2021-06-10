@@ -1,11 +1,11 @@
-CC=CC
+CC=g++
 CC_FLAGS=
 CC_LIBS=-lcudart -lstdc++
 CC_CUL=
 CC_CUI=
 
 CU_CC=nvcc
-CU_FLAGS=-O3 -arch compute_35    
+CU_FLAGS=-O3  
 CU_DEFS=
 
 SOURCE=ldc2D.cxx
